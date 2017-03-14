@@ -1,0 +1,21 @@
+main: me.Tiernanator.Factions.Main
+version: 3.0
+name: Factions
+description: A Plugin that handles player Factions.
+load: POSTWORLD
+author: Tiernanator
+website: None
+database: false
+depend: [Utilities, Permissions]
+prefix: Faction
+softdepend: []
+loadbefore: []
+commands:
+    setFaction:
+        description: Allows you to set a players' faction.
+    getFaction:
+        description: Returns your faction.
+    listFactions:
+        description: List all the Factions available on the Server.
+    rogue:
+        description: Allows you to go Rogue & leave your faction.
