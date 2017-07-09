@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Factions.Main;
+import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Commands.GetFaction;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
@@ -15,17 +15,17 @@ import me.Tiernanator.Factions.Factions.FactionAccessor;
 public class FactionEventHandler implements Listener {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static FactionsMain plugin;
 
 	ChatColor good = Colour.ALTERNATE_GOOD.getColour();
 	ChatColor highlight = Colour.ALTERNATE_HIGHLIGHT.getColour();
 	ChatColor warning = Colour.ALTERNATE_WARNING.getColour();
 	
-	public FactionEventHandler(Main main) {
+	public FactionEventHandler(FactionsMain main) {
 		plugin = main;
 	}
 
-	public static void setPlugin(Main main) {
+	public static void setPlugin(FactionsMain main) {
 		plugin = main;
 	}
 	
@@ -51,48 +51,4 @@ public class FactionEventHandler implements Listener {
 		}
 	}
 
-//	@SuppressWarnings("unused")
-//	private boolean hasValue(Player player) {
-//		
-//		String query = "SELECT Faction FROM FactionUsers WHERE " + "UUID = '" + player.getUniqueId().toString() + "';";
-//
-//		Connection connection = Main.getSQLConnection();
-//		Statement statement = null;
-//		try {
-//			statement = connection.createStatement();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		ResultSet resultSet = null;
-//		try {
-//			resultSet = statement.executeQuery(query);
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		try {
-//			if (!resultSet.isBeforeFirst()) {
-//				return false;
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		try {
-//			resultSet.next();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//		String playerFactionName = Faction.getPlayerFactionName(player);
-//		String resultName = null;
-//
-//		try {
-//			resultName = resultSet.getString("Faction");
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return playerFactionName.equalsIgnoreCase(resultName);
-//		
-//	}
-	
 }

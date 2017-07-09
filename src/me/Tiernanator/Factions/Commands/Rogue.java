@@ -9,14 +9,14 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Factions.Main;
+import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
 
 public class Rogue implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static FactionsMain plugin;
 
 	ChatColor warning = Colour.ALTERNATE_WARNING.getColour();
 	ChatColor informative = Colour.ALTERNATE_INFORMATIVE.getColour();
@@ -24,7 +24,7 @@ public class Rogue implements CommandExecutor {
 	ChatColor good = Colour.ALTERNATE_GOOD.getColour();
 	ChatColor regal = Colour.REGAL.getColour();
 	
-	public Rogue(Main main) {
+	public Rogue(FactionsMain main) {
 		plugin = main;
 	}
 

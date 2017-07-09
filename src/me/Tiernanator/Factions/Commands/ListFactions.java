@@ -8,15 +8,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Factions.Main;
+import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Factions.Faction;
 
 public class ListFactions implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private Main plugin;
+	private FactionsMain plugin;
 
-	public ListFactions(Main main) {
+	public ListFactions(FactionsMain main) {
 		plugin = main;
 	}
 	

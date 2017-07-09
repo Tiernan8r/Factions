@@ -1,4 +1,4 @@
-main: me.Tiernanator.Factions.Main
+main: me.Tiernanator.Factions.FactionsMain
 version: 3.0
 name: Factions
 description: A Plugin that handles player Factions.

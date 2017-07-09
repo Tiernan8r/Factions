@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Factions.Main;
+import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
 import me.Tiernanator.Utilities.Players.GetPlayer;
@@ -15,7 +15,7 @@ import me.Tiernanator.Utilities.Players.GetPlayer;
 public class GetFaction implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static FactionsMain plugin;
 
 	// I told you they recurred...(I did in TestPermission anyway)
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
@@ -25,7 +25,7 @@ public class GetFaction implements CommandExecutor {
 	private ChatColor bad = Colour.ALTERNATE_BAD.getColour();
 
 	// this has to stay the Main class won't be happy.
-	public GetFaction(Main main) {
+	public GetFaction(FactionsMain main) {
 		plugin = main;
 	}
 	

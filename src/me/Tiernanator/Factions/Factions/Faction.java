@@ -9,14 +9,14 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Factions.Main;
+import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.File.ConfigAccessor;
 
 public class Faction {
 
-	private static Main plugin;
+	private static FactionsMain plugin;
 
-	public static void setPlugin(Main main) {
+	public static void setPlugin(FactionsMain main) {
 		plugin = main;
 	}
 

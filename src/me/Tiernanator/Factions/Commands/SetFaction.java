@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Factions.Main;
+import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
 import me.Tiernanator.Utilities.Players.GetPlayer;
@@ -18,7 +18,7 @@ public class SetFaction implements CommandExecutor {
 
 	// plugin has changed to static because the function references it.
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static FactionsMain plugin;
 
 	// Colour Constants
 	private static ChatColor highlight = Colour.ALTERNATE_HIGHLIGHT.getColour();
@@ -27,7 +27,7 @@ public class SetFaction implements CommandExecutor {
 	private static ChatColor informative = Colour.ALTERNATE_INFORMATIVE.getColour();
 	private static ChatColor bad = Colour.ALTERNATE_BAD.getColour();
 
-	public SetFaction(Main main) {
+	public SetFaction(FactionsMain main) {
 		plugin = main;
 	}
 
