@@ -6,11 +6,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Commands.GetFaction;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
+import me.Tiernanator.Utilities.Colours.Colour;
 
 public class FactionEventHandler implements Listener {
 
@@ -36,8 +36,9 @@ public class FactionEventHandler implements Listener {
 
 		Faction faction = null;
 		FactionAccessor factionAccessor = new FactionAccessor(player);
-//		if(!player.hasPlayedBefore() || !hasValue(player)) {
-		if(!player.hasPlayedBefore()) {
+		if(!player.hasPlayedBefore() || !factionAccessor.hasPlayerFaction()) {
+//		if(!player.hasPlayedBefore()) {
+			
 			for(Faction f : Faction.allFactions()) {
 				if(f.isDefault()) {
 					faction = f;

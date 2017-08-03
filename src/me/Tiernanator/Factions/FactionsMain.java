@@ -10,7 +10,7 @@ import me.Tiernanator.Factions.Commands.SetFaction;
 import me.Tiernanator.Factions.FactionEvents.FactionEventHandler;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class FactionsMain extends JavaPlugin {
 	
@@ -53,8 +53,9 @@ public class FactionsMain extends JavaPlugin {
 	private void initialiseSQL() {
 		
 		String query = "CREATE TABLE IF NOT EXISTS FactionUsers ( "
-				+ "UUID varchar(36), "
-				+ "Faction varchar(255)"
+				+ "UUID varchar(36) NOT NULL, "
+				+ "Faction varchar(255) NOT NULL,"
+				+ "PRIMARY KEY (UUID)"
 				+ ");";
 		SQLServer.executeQuery(query);
 		

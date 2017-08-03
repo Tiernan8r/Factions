@@ -8,9 +8,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Factions.FactionsMain;
-import me.Tiernanator.File.ConfigAccessor;
+import me.Tiernanator.Utilities.Colours.Colour;
+import me.Tiernanator.Utilities.File.ConfigAccessor;
 
 public class Faction {
 

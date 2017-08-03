@@ -7,9 +7,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.Factions.Faction;
+import me.Tiernanator.Utilities.Colours.Colour;
 
 public class ListFactions implements CommandExecutor {
 

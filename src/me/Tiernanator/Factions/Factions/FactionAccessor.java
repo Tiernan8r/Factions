@@ -2,11 +2,10 @@ package me.Tiernanator.Factions.Factions;
 
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import me.Tiernanator.Factions.FactionsMain;
 import me.Tiernanator.Factions.FactionEvents.CustomEvents.CustomFactionChangeEvent;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class FactionAccessor {
 
@@ -44,40 +43,30 @@ public class FactionAccessor {
 	public void setPlayerFaction(Faction faction) {
 
 		String playerUUID = getPlayer().getUniqueId().toString();
-		BukkitRunnable runnable = new BukkitRunnable() {
 
-			@Override
-			public void run() {
+		if (!hasPlayerFaction()) {
 
-				if (!hasPlayerFaction()) {
+			String statement = "INSERT INTO FactionUsers (UUID, Faction) VALUES (?, ?);";
+			Object[] values = new Object[]{playerUUID, faction.getName()};
+			SQLServer.executePreparedStatement(statement, values);
 
-					String statement = "INSERT INTO FactionUsers (UUID, Faction) VALUES (?, ?);";
-					Object[] values = new Object[]{playerUUID,
-							faction.getName()};
-					SQLServer.executePreparedStatement(statement, values);
-				} else {
+		} else {
 
-					String query = "UPDATE FactionUsers SET Faction = '"
-							+ faction.getName() + "' WHERE UUID = '"
-							+ playerUUID + "';";
+			String statement = "UPDATE FactionUsers SET Faction = ? WHERE UUID = ?;";
+			Object[] values = new Object[] {faction.getName(), playerUUID};
+			SQLServer.executePreparedStatement(statement, values);
+			
+		}
 
-					SQLServer.executeQuery(query);
-				}
+		if (getPlayer().isOnline()) {
 
-				if (getPlayer().isOnline()) {
+			Player player = (Player) getPlayer();
 
-					Player player = (Player) getPlayer();
+			CustomFactionChangeEvent factionChangeEvent = new CustomFactionChangeEvent(
+					player, faction);
+			plugin.getServer().getPluginManager().callEvent(factionChangeEvent);
 
-					CustomFactionChangeEvent factionChangeEvent = new CustomFactionChangeEvent(
-							player, faction);
-					plugin.getServer().getPluginManager()
-							.callEvent(factionChangeEvent);
-
-				}
-
-			}
-		};
-		runnable.runTaskAsynchronously(plugin);
+		}
 
 	}
 
