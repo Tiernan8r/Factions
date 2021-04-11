@@ -1,8 +1,5 @@
 package me.Tiernanator.Factions;
 
-import org.bukkit.plugin.PluginManager;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import me.Tiernanator.Factions.Commands.GetFaction;
 import me.Tiernanator.Factions.Commands.ListFactions;
 import me.Tiernanator.Factions.Commands.Rogue;
@@ -11,6 +8,8 @@ import me.Tiernanator.Factions.FactionEvents.FactionEventHandler;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
 import me.Tiernanator.Utilities.SQL.SQLServer;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class FactionsMain extends JavaPlugin {
 	

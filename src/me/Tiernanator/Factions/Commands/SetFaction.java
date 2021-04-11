@@ -1,7 +1,10 @@
 package me.Tiernanator.Factions.Commands;
 
-import java.util.List;
-
+import me.Tiernanator.Factions.Factions.Faction;
+import me.Tiernanator.Factions.Factions.FactionAccessor;
+import me.Tiernanator.Factions.FactionsMain;
+import me.Tiernanator.Utilities.Colours.Colour;
+import me.Tiernanator.Utilities.Players.GetPlayer;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
@@ -9,11 +12,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Factions.FactionsMain;
-import me.Tiernanator.Factions.Factions.Faction;
-import me.Tiernanator.Factions.Factions.FactionAccessor;
-import me.Tiernanator.Utilities.Colours.Colour;
-import me.Tiernanator.Utilities.Players.GetPlayer;
+import java.util.List;
 
 public class SetFaction implements CommandExecutor {
 

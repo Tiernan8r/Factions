@@ -1,11 +1,10 @@
 package me.Tiernanator.Factions.Factions;
 
+import me.Tiernanator.Factions.FactionEvents.CustomEvents.CustomFactionChangeEvent;
+import me.Tiernanator.Factions.FactionsMain;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-
-import me.Tiernanator.Factions.FactionsMain;
-import me.Tiernanator.Factions.FactionEvents.CustomEvents.CustomFactionChangeEvent;
-import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class FactionAccessor {
 

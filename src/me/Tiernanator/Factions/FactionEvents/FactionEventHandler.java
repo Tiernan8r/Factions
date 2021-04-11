@@ -1,16 +1,15 @@
 package me.Tiernanator.Factions.FactionEvents;
 
+import me.Tiernanator.Factions.Commands.GetFaction;
+import me.Tiernanator.Factions.Factions.Faction;
+import me.Tiernanator.Factions.Factions.FactionAccessor;
+import me.Tiernanator.Factions.FactionsMain;
+import me.Tiernanator.Utilities.Colours.Colour;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-
-import me.Tiernanator.Factions.FactionsMain;
-import me.Tiernanator.Factions.Commands.GetFaction;
-import me.Tiernanator.Factions.Factions.Faction;
-import me.Tiernanator.Factions.Factions.FactionAccessor;
-import me.Tiernanator.Utilities.Colours.Colour;
 
 public class FactionEventHandler implements Listener {
 

@@ -1,16 +1,15 @@
 package me.Tiernanator.Factions.Factions;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import me.Tiernanator.Factions.FactionsMain;
+import me.Tiernanator.Utilities.Colours.Colour;
+import me.Tiernanator.Utilities.File.ConfigAccessor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.Tiernanator.Factions.FactionsMain;
-import me.Tiernanator.Utilities.Colours.Colour;
-import me.Tiernanator.Utilities.File.ConfigAccessor;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Faction {
 

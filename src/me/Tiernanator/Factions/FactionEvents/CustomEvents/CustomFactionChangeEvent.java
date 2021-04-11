@@ -1,10 +1,9 @@
 package me.Tiernanator.Factions.FactionEvents.CustomEvents;
 
+import me.Tiernanator.Factions.Factions.Faction;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-
-import me.Tiernanator.Factions.Factions.Faction;
 
 //This is the custom player change faction event called when a player changes faction, but not power...
 
